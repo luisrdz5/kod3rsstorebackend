@@ -1,0 +1,54 @@
+{
+  "name": "backend-api",
+  "version": "0.1.0",
+  "description": "e-commerce api",
+  "main": "server.js",
+  "scripts": {
+    "jsdocs": "./node_modules/.bin/jsdoc -r -c .jsdocsconfig.json",
+    "dev": "nodemon src/server.js",
+    "test": "./node_modules/.bin/mocha ./tests/integration/integration_test.js",
+    "coverage": "./node_modules/.bin/nyc npm run test",
+    "test:ci": "echo \"no test specified\" && exit 0",
+    "start": "NODE_ENV=production node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kod3rsStore/Backend"
+  },
+  "keywords": [
+    "ecommerce"
+  ],
+  "author": "kod3rs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kod3rsStore/Backend/issues"
+  },
+  "homepage": "https://github.com/kod3rsStore/Backend#readme",
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@hapi/joi": "^17.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "braintree": "^2.23.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "nanoid": "^3.1.9",
+    "passport": "^0.4.1",
+    "passport-http": "^0.3.0",
+    "passport-jwt": "^4.0.0",
+    "stripe": "^8.56.0",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "chalk": "^4.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "jsdoc": "^3.6.4",
+    "mocha": "^7.1.2",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.0.1"
+  }
+}
